@@ -29,21 +29,13 @@ class _NativeWebState extends State<NativeWeb> {
   @override
   Widget build(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {
-      return Column(
-        children: <Widget>[
-          Text(
-            'Webview from Android Code',
-            textAlign: TextAlign.center,
-          ),
-          Container(
-            height: widget.height,
-            child: AndroidView(
-              viewType: 'nativeweb',
-              onPlatformViewCreated: onPlatformViewCreated,
-              creationParamsCodec: const StandardMessageCodec(),
-            ),
-          )
-        ],
+      return Container(
+        height: widget.height,
+        child: AndroidView(
+          viewType: 'nativeweb',
+          onPlatformViewCreated: onPlatformViewCreated,
+          creationParamsCodec: const StandardMessageCodec(),
+        ),
       );
     }
 

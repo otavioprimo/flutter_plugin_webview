@@ -23,12 +23,10 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Container(
-            child: NativeWeb(
-              onWebCreated: onWebCreated,
-              height: 400.0,
-            ),
+        body: Container(
+          child: NativeWeb(
+            onWebCreated: onWebCreated,
+            height: 400.0,
           ),
         ),
       ),
@@ -37,6 +35,6 @@ class _MyAppState extends State<MyApp> {
 
   void onWebCreated(webController) {
     this.webController = webController;
-    this.webController.loadUrl('https://google.com');
+    this.webController.loadUrl('https://github.com');
   }
 }
